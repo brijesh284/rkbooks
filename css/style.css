@@ -224,6 +224,7 @@ ul {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: #858182;
+  margin-top: 15px;
 }
 /* header */
 .header {
@@ -277,7 +278,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   height: 120vh;
-  padding: 180px 0px 0px;
+  padding: 220px 0px 0px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -304,7 +305,6 @@ ul {
 }
 .banner-section .banner-section-inner p {
   color: rgba(255, 255, 255, 1);
-  margin-top: 10px;
   margin-bottom: 48px;
 }
 .banner-section .banner-section-inner button {
@@ -315,7 +315,6 @@ ul {
   padding: 20px 0px 50px;
 }
 .available-sites .heading-title p {
-  margin-top: 15px;
   margin-bottom: 40px;
 }
 /* books-wrap-section */
@@ -327,9 +326,6 @@ ul {
 .books-wrap-section .heading-title {
   position: relative;
   z-index: 9;
-}
-.books-wrap-section .heading-title p {
-  margin-top: 20px;
 }
 .books-wrap-section .books-wrap-inner {
   position: relative;
@@ -530,7 +526,7 @@ ul {
 }
 .bonus-section .bonus-inner {
   background-image: url(..//img/touchbg.png);
-  padding: 70px 0px;
+  padding: 60px 0px;
   position: relative;
   background-repeat: no-repeat;
 }
@@ -547,23 +543,25 @@ ul {
 }
 .bonus-section .bonus-inner .bonus-bg-left {
   left: 30px;
-  top: -114px;
+  top: -120px;
 }
 .bonus-section .bonus-inner .bonus-bg-right {
-  top: -124px;
+  top: -130px;
   right: 0px;
 }
 .bonus-section .bonus-inner .bonus-dec {
   text-align: center;
 }
 .bonus-section .bonus-inner .bonus-dec p {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 36px;
   line-height: 44px;
   letter-spacing: 0.03em;
   color: #ffffff;
 }
 .bonus-section .bonus-inner .bonus-dec h1 {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .bonus-section .bonus-inner .bonus-dec button a {
   font-size: 20px;
@@ -697,35 +695,133 @@ ul {
 }
 /* slider */
 .slider-section {
-  padding: 100px 0px;
-}
-.cloned {
-  clip-path: polygon(0 0, 100% 9%, 100% 85%, 0% 100%) !important;
-}
-.medium2 {
-  clip-path: polygon(0 0, 100% 9%, 100% 85%, 0% 100%) !important;
-}
-.medium1 {
-  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 85%);
-}
-.big1 {
-  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 85%);
-}
-.active {
-  clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 85%);
-}
-.center {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
-}
-/* footer-section */
-.footer-section {
-  padding: 120px 0px 0px;
-  background-image: url(..//img/footerbg.png);
+  padding: 100px 0px 120px;
   position: relative;
   overflow: hidden;
-  background-position: center;
+}
+.slider-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  background: url(..//img/bg-dots.png) 0 0 repeat;
+  transform: rotate(183deg);
   background-size: contain;
+}
+.slide-main {
+  position: relative;
+  height: auto;
+  padding: 11px 0 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dg-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.dg-wrapper {
+  width: 410px;
+  height: 350px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.dg-wrapper a {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.dg-wrapper a:first-child {
+  z-index: 2;
+}
+
+.dg-wrapper a img {
+  display: block;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.dg-wrapper a.dg-transition {
+  transition: all 0.5s ease-in-out;
+}
+
+.dg-wrapper a.dg-transition-fast {
+  transition: all 0.2s ease-in-out;
+}
+
+.dg-container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+.dg-container nav svg {
+  width: 70px;
+  height: 70px;
+  fill: #fff;
+  background: rgb(255 255 255 / 15%);
+  padding: 23px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dg-container nav span:hover {
+  opacity: 1;
+}
+
+.dg-container nav span.dg-next {
+  background-position: top right;
+  margin-left: 10px;
+}
+
+.dg-container #lightButton2 {
+  bottom: 20px;
+}
+
+.dg-container .button {
+  display: none;
+  position: relative;
+  z-index: 5;
+}
+
+/* footer-section */
+.footer-section {
+  position: relative;
+  padding: 120px 0px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.footer-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(..//img/footerbg.png);
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  z-index: -1;
+}
+.footer-section .footer-inner .footer-list {
+  width: 80%;
 }
 .footer-section .footer-inner h3 {
   font-family: HeadingNowTrial-bold;
@@ -734,21 +830,13 @@ ul {
   letter-spacing: 0px;
   color: #fff;
   margin-bottom: 0px;
-  background: linear-gradient(
-      to right,
-      rgba(255, 215, 255, 0) 0%,
-      rgba(225, 255, 255, 0.5) 20%,
-      rgba(255, 255, 255, 0) 61%
-    ),
-    linear-gradient(
-      rgb(255, 255, 255) 50%,
-      rgb(224, 246, 255) 50%,
-      rgb(147, 149, 152) 50%
-    );
+  background: linear-gradient(360deg, #ffffff 20%, #939598 50%, #ffffff 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 200ms ease;
   animation: ocean 2000ms ease alternate infinite;
+  -webkit-text-stroke-width: 2px;
+  letter-spacing: 2px;
 }
 .footer-section .footer-inner p {
   font-weight: 400;
@@ -781,17 +869,9 @@ ul {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
-.footer-menu {
-  list-style-image: url(..//img/footer-arw.png);
-  padding-right: 50px;
-}
-.footer-menu li {
-  margin-bottom: 0px !important;
-  border-bottom: 1px dotted #808080;
-  padding: 12px 0px;
-}
+
 .footer-inner .footer-blur-bg {
   position: absolute;
   right: 0px;
@@ -802,7 +882,7 @@ ul {
 }
 .footer-section .footer-rmd {
   text-align: center;
-  padding: 40px 0px;
+  padding: 40px 0px 40px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 .footer-section .footer-rmd p {

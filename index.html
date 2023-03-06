@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RB - Books</title>
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -243,23 +241,56 @@
     <!-- Slider -->
     <section class="slider-section">
       <div class="container">
-        <div class="heading-title title-width">
+        <div class="heading-title title-width mb-5">
           <h1>Celebs love us</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div class="owl-carousel owl-theme loop" id="#owl-demo">
-          <div class="item">
-            <img src="img/slide2.png" alt="" class="img-fluid" />
-          </div>
-          <div class="item">
-            <img src="img/slide3.png" alt="" class="img-fluid" />
-          </div>
-          <div class="item">
-            <img src="img/slide1.png" alt="" class="img-fluid" />
-          </div>
+        <div class="slide-main">
+          <section id="dg-container" class="dg-container">
+            <div class="dg-wrapper">
+              <a href="#">
+                <img
+                  src="img/slide1.png" alt="slide1" class="img-fluid"
+                />
+              </a>
+              <a href="#">
+                <img
+                src="img/slide2.png" alt="slide2" class="img-fluid"
+                />
+              </a>
+              <a href="#">
+                <img
+                src="img/slide3.png" alt="slide3" class="img-fluid"
+                />
+              </a>
+              <a href="#">
+                <img
+                src="img/slide2.png" alt="slide2" class="img-fluid"
+                />
+              </a>
+              <a href="#">
+                <img
+                src="img/slide3.png" alt="slide3" class="img-fluid"
+                />
+              </a>
+              </a>
+            </div>
+            <ol class="button" id="lightButton">
+              <li index="0"></li>
+              <li index="1"></li>
+              <li index="2"></li>
+              <li index="3"></li>
+              <li index="4"></li>
+            </ol>
+
+            <nav>
+              <span class="dg-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></span>
+              <span class="dg-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span>
+            </nav>
+          </section>
         </div>
       </div>
     </section>
@@ -315,6 +346,12 @@
                   Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod
                   tempor...
                 </p>
+               
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="footer-list">
+                <h4>Contact Us</h4>
                 <ul>
                   <li>
                     <a href="#"
@@ -347,23 +384,8 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-              <div class="footer-list">
-                <h4>Useful Links</h4>
-                <ul class="footer-menu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About US</a></li>
-                  <li><a href="#">Our Games</a></li>
-                  <li><a href="#">24th Supports</a></li>
-                  <li><a href="#">Who Love Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-1"></div>
 
-            <div class="col-lg-2">
+            <div class="col-lg-4">
               <div class="footer-list">
                 <h4>Social Media</h4>
                 <ul>
@@ -430,55 +452,7 @@
     <script src="js/all.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        center: true,
-        left: true,
-        margin: 0,
-        nav: true,
-        animateOut: "slideOutDown",
-        animateIn: "flipInX",
-        items: 1,
-        margin: 30,
-        stagePadding: 30,
-        smartSpeed: 450,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 3,
-          },
-        },
-      });
-    </script>
-    <script>
-      $(function () {
-        $(".loop").owlCarousel({
-          center: true,
-          items: 3,
-          loop: true,
-          margin: 0,
-        });
-
-        $(".loop").on("translate.owl.carousel", function (e) {
-          idx = e.item.index;
-          $(".owl-item.big1").removeClass("big1");
-          $(".owl-item.medium").removeClass("medium");
-          $(".owl-item big2").eq(idx).addClass("big2");
-          $(".owl-item")
-            .eq(idx - 1)
-            .addClass("medium2");
-          $(".owl-item")
-            .eq(idx + 1)
-            .addClass("medium1");
-        });
-      });
-    </script>
+    <script src="js/slider.js"></script>
+    
   </body>
 </html>
