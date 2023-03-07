@@ -213,8 +213,6 @@ ul {
   background: linear-gradient(360deg, #ffffff 20%, #939598 50%, #ffffff 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: 200ms ease;
-  animation: ocean 2000ms ease alternate infinite;
   -webkit-text-stroke-width: thin;
   letter-spacing: 2px;
 }
@@ -387,7 +385,7 @@ ul {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(100deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -857,8 +855,6 @@ ul {
   background: linear-gradient(360deg, #ffffff 20%, #939598 50%, #ffffff 20%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: 200ms ease;
-  animation: ocean 2000ms ease alternate infinite;
   -webkit-text-stroke-width: thin;
   letter-spacing: 2px;
 }
