@@ -1182,7 +1182,7 @@ ul {
     margin-bottom: 30px;
   }
   .banner-section {
-    height: 55vh;
+    height: 80vh;
     padding: 0px;
     display: flex;
     align-items: flex-end;
@@ -1261,8 +1261,12 @@ ul {
   }
   .bonus-section .bonus-inner .bonus-bg-left {
     left: -40px;
-    top: 70px;
+    top: auto;
     width: 40%;
+    bottom: 0;
+  }
+  .slider-section {
+    padding: 60px 0px 30px;
   }
   .dg-container {
     width: 90%;
