@@ -11,7 +11,6 @@ body {
   font-family: ClashGrotesk-Variable;
   background: #000;
   color: #fff;
-  transition: all ease-in-out 0.5s;
 }
 * {
   padding: 0px;
@@ -74,56 +73,7 @@ ul {
 .Click-btn::after {
   content: "";
   position: absolute;
-  background: radial-gradient(
-    50.02% 49.92% at 49.36% 45.71%,
-    #ff9800 0%,
-    #ef8e00 2%,
-    #bd7100 9%,
-    #905600 17%,
-    #693f00 25%,
-    #492b00 34%,
-    #2e1b00 43%,
-    #1a0f00 53%,
-    #0b0700 64%,
-    #030200 78%,
-    #000000 100%
-  );
-  background: radial-gradient(
-    50.03% 49.56% at 49.33% 49.12%,
-    #fff5e7 30%,
-    #ffce86 32%,
-    #ffb13e 33%,
-    #ff9800 34%,
-    #f69200 35%,
-    #c87700 38%,
-    #9d5d00 41%,
-    #774700 44%,
-    #573400 47%,
-    #3b2300 51%,
-    #251600 55%,
-    #140c00 60%,
-    #090500 67%,
-    #020100 76%,
-    #000000 100%
-  );
-  background: radial-gradient(
-    50.06% 50.13% at 49.1% 59.23%,
-    #fff5e7 30%,
-    #ffce86 32%,
-    #ffb13e 33%,
-    #ff9800 34%,
-    #f69200 35%,
-    #c87700 38%,
-    #9d5d00 41%,
-    #774700 44%,
-    #573400 47%,
-    #3b230000 51%,
-    #3b230000 55%,
-    #3b230000 60%,
-    #3b230000 67%,
-    #3b230000 76%,
-    #3b230000 100%
-  );
+  background-image: url(..//img/buttonshadow.png);
   top: -15px;
   width: 100%;
   height: 10px;
@@ -131,10 +81,13 @@ ul {
   z-index: 9999999999999;
   background-blend-mode: screen;
   mix-blend-mode: screen;
-  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .Click-btn:hover:after {
-  width: 110%;
+  top: -14px;
+  left: 13px;
+  transform: scale(1.5);
 }
 /* play-btn */
 
@@ -170,35 +123,21 @@ ul {
 .play-btn::after {
   content: "";
   position: absolute;
-  background: radial-gradient(
-    50.06% 50.13% at 49.1% 59.23%,
-    #fff5e7 30%,
-    #ffce86 32%,
-    #ffb13e 33%,
-    #ff9800 34%,
-    #f69200 35%,
-    #c87700 38%,
-    #9d5d00 41%,
-    #774700 44%,
-    #573400 47%,
-    #3b2300 51%,
-    #25160000 55%,
-    #140c0000 60%,
-    #00000000 67%,
-    #02010000 76%,
-    #2e2e2e00 100%
-  );
-  top: -20px;
+  background-image: url(..//img/dsaf.png);
+  top: -15px;
   width: 100%;
   height: 10px;
   left: 0;
   z-index: 9999999999999;
   background-blend-mode: screen;
   mix-blend-mode: screen;
-  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  /* background-size: contain; */
 }
 .play-btn:hover:after {
-  width: 110%;
+  top: -14px;
+  left: 13px;
+  transform: scale(1.5);
 }
 .heading-title {
   text-align: center;
