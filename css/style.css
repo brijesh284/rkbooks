@@ -805,6 +805,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 .dg-wrapper a:first-child {
@@ -1207,6 +1208,18 @@ ul {
 }
 /* 480 */
 @media only screen and (max-width: 480px) {
+  .dg-center::after {
+    content: "";
+    top: 42%;
+    left: 40%;
+    height: 60px;
+    width: 60px;
+  }
+  .dg-container nav svg {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
   .books-wrap-dec {
     margin-top: -30px;
     padding-top: 30px;
