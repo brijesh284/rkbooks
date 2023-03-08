@@ -189,7 +189,7 @@ ul {
 
 .head-dec {
   background-image: url(..//img/headerbg.png);
-  padding: 20px 30px 40px;
+  padding: 15px 30px 25px;
   text-align: center;
   background-position: center;
   background-size: cover;
@@ -356,7 +356,7 @@ ul {
   background-color: #000;
   width: 100%;
   height: 140px;
-  filter: blur(40px);
+  filter: blur(30px);
   z-index: -1;
   left: 0;
   top: 0;
@@ -416,7 +416,7 @@ ul {
 .customer-support .support-number {
   text-align: center;
 }
-.customer-support .support-number .Click-btn a {
+/* .customer-support .support-number .Click-btn a {
   padding: 15px 30px;
   font-size: 18px;
 }
@@ -424,7 +424,7 @@ ul {
   content: "";
   position: absolute;
   top: -7px;
-}
+} */
 
 /* ids-section */
 .ids-section {
