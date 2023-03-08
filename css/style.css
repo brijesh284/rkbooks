@@ -60,21 +60,19 @@ ul {
   letter-spacing: 0.03em;
   color: #fff;
   padding: 12px 20px;
-  height: 50px;
-  max-height: 50px;
-  min-height: 50px;
+  display: inline-block;
+  width: 100%;
 }
 .Click-btn {
   background-color: transparent;
   border: none;
   position: relative;
-  margin-top: 10px;
 }
 .Click-btn::after {
   content: "";
   position: absolute;
   background-image: url(..//img/buttonshadow.png);
-  top: -15px;
+  top: -6px;
   width: 100%;
   height: 10px;
   left: 0;
@@ -85,8 +83,7 @@ ul {
   background-size: cover;
 }
 .Click-btn:hover:after {
-  top: -14px;
-  /* left: 5px; */
+  top: -7px;
   transform: scale(1.5);
 }
 /* play-btn */
@@ -110,15 +107,14 @@ ul {
   letter-spacing: 0.03em;
   color: #fff;
   padding: 15px 40px;
-  height: 60px;
-  max-height: 60px;
-  min-height: 60px;
+  height: 50px;
+  max-height: 50px;
+  min-height: 50px;
 }
 .play-btn {
   background-color: transparent;
   border: none;
   position: relative;
-  margin-top: 10px;
 }
 .play-btn::after {
   content: "";
@@ -152,7 +148,7 @@ ul {
   background-size: cover;
 }
 .play-btn:hover:after {
-  top: -20px;
+  top: -19px;
   left: 0;
   transform: scale(1.2);
 }
@@ -427,7 +423,7 @@ ul {
 .customer-support .support-number .Click-btn::after {
   content: "";
   position: absolute;
-  top: -19px;
+  top: -7px;
 }
 
 /* ids-section */
@@ -631,42 +627,11 @@ ul {
   transform: rotate(-43deg);
   top: 45px;
   left: -55px;
+  z-index: 9;
 }
 .customer-dec-wrap .customer-btn button::after {
   content: "";
   position: absolute;
-  background: radial-gradient(
-    50.02% 49.92% at 49.36% 45.71%,
-    #ff9800 0%,
-    #ef8e00 2%,
-    #bd7100 9%,
-    #905600 17%,
-    #693f00 25%,
-    #492b00 34%,
-    #2e1b00 43%,
-    #1a0f00 53%,
-    #0b0700 64%,
-    #030200 78%,
-    #000000 100%
-  );
-  background: radial-gradient(
-    50.03% 49.56% at 49.33% 49.12%,
-    #fff5e7 30%,
-    #ffce86 32%,
-    #ffb13e 33%,
-    #ff9800 34%,
-    #f69200 35%,
-    #c87700 38%,
-    #9d5d00 41%,
-    #774700 44%,
-    #573400 47%,
-    #3b2300 51%,
-    #251600 55%,
-    #140c00 60%,
-    #090500 67%,
-    #020100 76%,
-    #000000 100%
-  );
   background: radial-gradient(
     50.06% 50.13% at 49.1% 59.23%,
     #fff5e7 30%,
@@ -677,8 +642,8 @@ ul {
     #c87700 38%,
     #9d5d00 41%,
     #774700 44%,
-    #573400 47%,
-    #3b2300 51%,
+    #57340000 47%,
+    #3b230000 51%,
     #00000000 55%,
     #00000000 60%,
     #00000000 67%,
@@ -731,12 +696,12 @@ ul {
 .customer-dec-wrap .contact-number .Click-btn::after {
   content: "";
   position: absolute;
-  top: -23px;
+  top: -8px;
 }
 .customer-dec-wrap .contact-number .Click-btn:hover::after {
   content: "";
   position: absolute;
-  top: -26px;
+  top: -10px;
 }
 /* slider */
 .slider-section {
@@ -1015,6 +980,7 @@ ul {
   }
   .head-dec .header-wrap {
     text-align: start;
+    overflow: hidden;
   }
   .head-dec .header-wrap p {
     text-align: start;
@@ -1255,20 +1221,28 @@ ul {
     font-size: 13px;
     line-height: 18px;
   }
-  .play-btn a,
-  .Click-btn a {
-    font-size: 16px !important;
-    line-height: 25px;
-    padding: 15px 30px !important;
-  }
-  .Click-btn::after,
-  .play-btn::after {
-    content: "";
-    top: -17px !important;
-  }
   .ids-section {
     padding-top: 50px;
   }
+  .play-btn a,
+  .Click-btn a {
+    font-size: 15px !important;
+    line-height: 25px;
+    padding: 10px 20px !important;
+  }
+  .Click-btn::after {
+    content: "";
+    top: -5px !important;
+  }
+  .play-btn::after {
+    content: "";
+    top: -13px !important;
+  }
+  .customer-dec-wrap .customer-btn button::after {
+    content: "";
+    width: 180px;
+  }
+
   .ids-section::before,
   .ids-section::after {
     content: "";
@@ -1287,7 +1261,7 @@ ul {
     left: -75px;
   }
   .customer-care-section .customer-wrap-main .customer-dec-wrap {
-    padding: 70px 20px 60px 20px;
+    padding: 50px 20px 40px 20px;
   }
   .heading-title p {
     font-size: 16px;
