@@ -382,6 +382,8 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 9;
 }
 .customer-support .bg-img .bg-inner {
   margin-top: 10%;
@@ -429,11 +431,11 @@ ul {
 /* ids-section */
 .ids-section {
   padding-top: 70px;
-  background-image: url(..//img/bg-dots.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: url(..//img/bg-dots.png); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
   position: relative;
-  background-position: center;
+  /* background-position: center; */
   width: 100%;
 }
 
@@ -441,18 +443,17 @@ ul {
   content: "";
   position: absolute;
   left: 0px;
-  top: -200px;
-  background-image: url(..//img/ids1.png);
-  width: 30%;
-  height: 100%;
-  background-size: contain;
+  top: -370px;
+  background-image: url(..//img/ids.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  background-position: top;
+  z-index: -1;
 }
 .ids-section::after {
-  content: "";
+  /* content: "";
   position: absolute;
   right: 0px;
   top: -200px;
@@ -465,7 +466,7 @@ ul {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
-.ids-inner {
+*/ .ids-inner {
   position: relative;
   z-index: 999;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
