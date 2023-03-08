@@ -771,9 +771,7 @@ ul {
   perspective: 1000px;
 }
 .play-icon {
-  position: absolute;
-  top: 50%;
-  left: 40%;
+  display: none;
 }
 .dg-wrapper a {
   width: 100%;
@@ -783,28 +781,23 @@ ul {
   left: 0;
   top: 0;
 }
-.dg-center::after {
-  content: "";
+.dg-center .play-icon {
+  /* content: ""; */
+  display: block !important;
   position: absolute;
   top: 40%;
   left: 40%;
   height: 100px;
   width: 100px;
-  background-image: url(..//img/playicon.png);
+  /* background-image: url(..//img/playicon.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   cursor: pointer;
 }
 
 .dg-wrapper a:first-child {
   z-index: 2;
-}
-
-.dg-wrapper a img {
-  display: block;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-  width: 100%;
 }
 
 .dg-wrapper a.dg-transition {
@@ -815,13 +808,17 @@ ul {
   transition: all 0.2s ease-in-out;
 }
 
-.dg-container nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.dg-prev {
   position: absolute;
-  width: 100%;
   top: 40%;
+  left: 0px;
+  z-index: 1;
+}
+.dg-next {
+  position: absolute;
+  top: 40%;
+  right: 0px;
+  z-index: 1;
 }
 .dg-container nav svg {
   width: 70px;
@@ -946,6 +943,70 @@ ul {
   color: #808080;
   cursor: pointer;
 }
+/* model */
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+.video-list {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 1px solid #ccc;
+  padding: 0px 30px;
+  background-color: #fffafa;
+  border-radius: 20px;
+  z-index: 999;
+  width: 50%;
+}
+.video-list.visible {
+  display: block;
+}
+.video-list .close {
+  position: absolute;
+  right: -30px;
+  top: -43px;
+  font-weight: 900;
+  font-size: 28px;
+  color: #000;
+  border-bottom: none;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+}
+.video-wrapper {
+  width: 100%;
+  margin: 30px auto;
+}
+.video-wrapper .video-container {
+  position: relative;
+  padding-bottom: 55.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.video-wrapper .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /*media 1399px */
 @media only screen and (max-width: 1399px) {
   .head-dec {
@@ -958,6 +1019,9 @@ ul {
 }
 /* 1199 */
 @media only screen and (max-width: 1199px) {
+  .video-list {
+    width: 70%;
+  }
   .head-dec {
     padding: 0px 30px 10px;
   }
@@ -1096,6 +1160,23 @@ ul {
 }
 /* 768 */
 @media only screen and (max-width: 768px) {
+  .video-list {
+    width: 90%;
+    padding: 0px 15px;
+  }
+  .video-wrapper {
+    margin: 15px auto;
+  }
+  .video-list .close {
+    right: 0px;
+    top: -35px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+  .video-wrapper .video-container {
+    padding-bottom: 370px;
+  }
   .banner-section::after {
     content: "";
     position: absolute;
@@ -1213,6 +1294,12 @@ ul {
 }
 /* 480 */
 @media only screen and (max-width: 480px) {
+  .dg-center .play-icon {
+    top: 50%;
+    left: 40%;
+    height: 70px;
+    width: 70px;
+  }
   .Redeem-btn a {
     font-size: 16px !important;
     line-height: 25px;
@@ -1221,12 +1308,15 @@ ul {
   .bonus-section .bonus-inner {
     padding: 20px 0px 40px;
   }
-  .dg-container nav {
+
+  .dg-prev,
+  .dg-next {
     top: 37%;
   }
+
   .dg-center::after {
     content: "";
-    top: 42%;
+    top: 53%;
     left: 40%;
     height: 60px;
     width: 60px;
@@ -1327,7 +1417,8 @@ ul {
     width: 100%;
   }
   .dg-wrapper {
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
   .dg-container nav svg {
     background: rgb(137 137 137 / 47%);
@@ -1346,10 +1437,6 @@ ul {
   }
   .slider-section {
     padding: 60px 0px 30px;
-  }
-  .dg-container {
-    width: 90%;
-    margin: auto;
   }
   .footer-inner .footer-blur-bg {
     width: 80%;

@@ -414,20 +414,56 @@
         <div class="slide-main">
           <section id="dg-container" class="dg-container">
             <div class="dg-wrapper">
-              <a href="https://youtu.be/LXb3EKWsInQ" target="_blank">
+              <a href="#" class="watch-more1">
                 <img src="img/slide1.png" alt="slide1" class="img-fluid" />
+                <div class="play-icon">
+                  <img
+                    src="img/playicon.png"
+                    alt="playicon"
+                    class="img-fluid watch-more"
+                  />
+                </div>
               </a>
-              <a href="https://youtu.be/LXb3EKWsInQ" target="_blank">
+
+              <a href="#" class="watch-more2">
                 <img src="img/slide2.png" alt="slide2" class="img-fluid" />
+                <div class="play-icon">
+                  <img
+                    src="img/playicon.png"
+                    alt="playicon"
+                    class="img-fluid watch-more"
+                  />
+                </div>
               </a>
-              <a href="https://youtu.be/LXb3EKWsInQ" target="_blank">
+              <a href="#" class="watch-more3">
                 <img src="img/slide3.png" alt="slide3" class="img-fluid" />
+                <div class="play-icon">
+                  <img
+                    src="img/playicon.png"
+                    alt="playicon"
+                    class="img-fluid watch-more"
+                  />
+                </div>
               </a>
-              <a href="https://youtu.be/LXb3EKWsInQ" target="_blank">
+              <a href="#" class="watch-more4">
                 <img src="img/slide4.png" alt="slide4" class="img-fluid" />
+                <div class="play-icon">
+                  <img
+                    src="img/playicon.png"
+                    alt="playicon"
+                    class="img-fluid watch-more"
+                  />
+                </div>
               </a>
-              <a href="https://youtu.be/LXb3EKWsInQ" target="_blank">
+              <a href="#" class="watch-more5">
                 <img src="img/slide5.png" alt="slide5" class="img-fluid" />
+                <div class="play-icon">
+                  <img
+                    src="img/playicon.png"
+                    alt="playicon"
+                    class="img-fluid watch-more"
+                  />
+                </div>
               </a>
             </div>
             <ol class="button" id="lightButton">
@@ -457,6 +493,104 @@
               </span>
             </nav>
           </section>
+          <!-- The Modal1 -->
+          <div id="modal1" class="modal">
+            <div class="video-list video-popup1">
+              <a class="close">&times;</a>
+              <!-- Modal content -->
+              <div class="video-wrapper">
+                <div class="video-container">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/K-EMszLvRIQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- The Modal2 -->
+          <div id="modal2" class="modal">
+            <div class="video-list video-popup2">
+              <a class="close">&times;</a>
+              <!-- Modal content -->
+              <div class="video-wrapper">
+                <div class="video-container">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- The Modal3 -->
+          <div id="modal3" class="modal">
+            <div class="video-list video-popup3">
+              <a class="close">&times;</a>
+              <!-- Modal content -->
+              <div class="video-wrapper">
+                <div class="video-container">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/tO01J-M3g0U"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- The Modal4 -->
+          <div id="modal4" class="modal">
+            <div class="video-list video-popup4">
+              <a class="close">&times;</a>
+              <!-- Modal content -->
+              <div class="video-wrapper">
+                <div class="video-container">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/sCL0SOsxiUc"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- The Modal5 -->
+          <div id="modal5" class="modal">
+            <div class="video-list video-popup5">
+              <a class="close">&times;</a>
+              <!-- Modal content -->
+              <div class="video-wrapper">
+                <div class="video-container">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/sCL0SOsxiUc"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -707,6 +841,166 @@
     <script src="js/wow.min.js"></script>
     <script>
       new WOW().init();
+    </script>
+    <!-- model1 -->
+    <script>
+      $(document).ready(function () {
+        // Watch More Link click handlers
+        const $popup1 = $(".video-popup1");
+        const $modal1 = $("#modal1");
+        const $closeIcon = $(".close");
+        const $watchMoreLink = $(".watch-more1");
+
+        $watchMoreLink.click(function (e) {
+          $popup1.fadeIn(200);
+          $modal1.fadeIn(200);
+          e.preventDefault();
+        });
+        $closeIcon.click(function () {
+          $popup1.fadeOut(200);
+          $modal1.fadeOut(200);
+        });
+        // for escape key
+        $(document).on("keyup", function (e) {
+          if (e.key === "Escape") {
+            $popup1.fadeOut(200);
+            $modal1.fadeOut(200);
+          }
+        });
+        // click outside of the popup1, close it
+        $modal1.on("click", function (e) {
+          $popup1.fadeOut(200);
+          $modal1.fadeOut(200);
+        });
+      });
+    </script>
+    <!-- model2 -->
+    <script>
+      $(document).ready(function () {
+        // Watch More Link click handlers
+        const $popup2 = $(".video-popup2");
+        const $modal2 = $("#modal2");
+        const $closeIcon = $(".close");
+        const $watchMoreLink = $(".watch-more2");
+
+        $watchMoreLink.click(function (e) {
+          $popup2.fadeIn(200);
+          $modal2.fadeIn(200);
+          e.preventDefault();
+        });
+        $closeIcon.click(function () {
+          $popup2.fadeOut(200);
+          $modal2.fadeOut(200);
+        });
+        // for escape key
+        $(document).on("keyup", function (e) {
+          if (e.key === "Escape") {
+            $popup2.fadeOut(200);
+            $modal2.fadeOut(200);
+          }
+        });
+        // click outside of the popup2, close it
+        $modal2.on("click", function (e) {
+          $popup2.fadeOut(200);
+          $modal2.fadeOut(200);
+        });
+      });
+    </script>
+    <!-- model3 -->
+    <script>
+      $(document).ready(function () {
+        // Watch More Link click handlers
+        const $popup3 = $(".video-popup3");
+        const $modal3 = $("#modal3");
+        const $closeIcon = $(".close");
+        const $watchMoreLink = $(".watch-more3");
+
+        $watchMoreLink.click(function (e) {
+          $popup3.fadeIn(200);
+          $modal3.fadeIn(200);
+          e.preventDefault();
+        });
+        $closeIcon.click(function () {
+          $popup3.fadeOut(200);
+          $modal3.fadeOut(200);
+        });
+        // for escape key
+        $(document).on("keyup", function (e) {
+          if (e.key === "Escape") {
+            $popup3.fadeOut(200);
+            $modal3.fadeOut(200);
+          }
+        });
+        // click outside of the popup3, close it
+        $modal3.on("click", function (e) {
+          $popup3.fadeOut(200);
+          $modal3.fadeOut(200);
+        });
+      });
+    </script>
+    <!-- model4 -->
+    <script>
+      $(document).ready(function () {
+        // Watch More Link click handlers
+        const $popup4 = $(".video-popup4");
+        const $modal4 = $("#modal4");
+        const $closeIcon = $(".close");
+        const $watchMoreLink = $(".watch-more4");
+
+        $watchMoreLink.click(function (e) {
+          $popup4.fadeIn(200);
+          $modal4.fadeIn(200);
+          e.preventDefault();
+        });
+        $closeIcon.click(function () {
+          $popup4.fadeOut(200);
+          $modal4.fadeOut(200);
+        });
+        // for escape key
+        $(document).on("keyup", function (e) {
+          if (e.key === "Escape") {
+            $popup4.fadeOut(200);
+            $modal4.fadeOut(200);
+          }
+        });
+        // click outside of the popup4, close it
+        $modal4.on("click", function (e) {
+          $popup4.fadeOut(200);
+          $modal4.fadeOut(200);
+        });
+      });
+    </script>
+    <!-- model5 -->
+    <script>
+      $(document).ready(function () {
+        // Watch More Link click handlers
+        const $popup5 = $(".video-popup5");
+        const $modal5 = $("#modal5");
+        const $closeIcon = $(".close");
+        const $watchMoreLink = $(".watch-more5");
+
+        $watchMoreLink.click(function (e) {
+          $popup5.fadeIn(200);
+          $modal5.fadeIn(200);
+          e.preventDefault();
+        });
+        $closeIcon.click(function () {
+          $popup5.fadeOut(200);
+          $modal5.fadeOut(200);
+        });
+        // for escape key
+        $(document).on("keyup", function (e) {
+          if (e.key === "Escape") {
+            $popup5.fadeOut(200);
+            $modal5.fadeOut(200);
+          }
+        });
+        // click outside of the popup5, close it
+        $modal5.on("click", function (e) {
+          $popup5.fadeOut(200);
+          $modal5.fadeOut(200);
+        });
+      });
     </script>
   </body>
 </html>
