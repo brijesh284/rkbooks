@@ -151,6 +151,12 @@ ul {
   left: 0;
   transform: scale(1.2);
 }
+.web-view {
+  display: block;
+}
+.mobile-view {
+  display: none;
+}
 .heading-title {
   text-align: center;
 }
@@ -292,6 +298,9 @@ ul {
 }
 .available-sites .heading-title p {
   margin-bottom: 40px;
+}
+.available-sites-inner img {
+  width: 100%;
 }
 /* books-wrap-section */
 .books-wrap-section {
@@ -451,11 +460,13 @@ ul {
   top: -370px;
   background-image: url(..//img/ids.png);
   width: 100%;
-  height: 100vh;
+  height: 140vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   z-index: -1;
+  filter: gray;
+  -webkit-filter: grayscale(1);
 }
 .ids-section::after {
   /* content: "";
@@ -938,7 +949,8 @@ ul {
 /*media 1399px */
 @media only screen and (max-width: 1399px) {
   .head-dec {
-    padding: 10px 30px 30px;
+    padding: 8px 30px 20px;
+    background-size: contain;
   }
   .title-width {
     width: 60%;
@@ -946,6 +958,9 @@ ul {
 }
 /* 1199 */
 @media only screen and (max-width: 1199px) {
+  .head-dec {
+    padding: 0px 30px 10px;
+  }
   .title-width {
     width: 100%;
   }
@@ -988,7 +1003,7 @@ ul {
     background-repeat: no-repeat;
   }
   .head-dec {
-    padding: 20px 30px 20px;
+    padding: 20px;
     background-color: transparent;
   }
   .head-dec .header-wrap {
@@ -1101,7 +1116,7 @@ ul {
     margin-bottom: 30px;
   }
   .banner-section .banner-section-inner h1 {
-    font-size: 40px;
+    font-size: 46px;
   }
   .customer-support {
     margin-top: 0px;
@@ -1184,6 +1199,18 @@ ul {
     width: 100%;
   }
 }
+/* 520 */
+@media only screen and (max-width: 520px) {
+  .web-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .banner-section .banner-section-inner h1 {
+    font-size: 42px;
+  }
+}
 /* 480 */
 @media only screen and (max-width: 480px) {
   .Redeem-btn a {
@@ -1195,7 +1222,7 @@ ul {
     padding: 20px 0px 40px;
   }
   .dg-container nav {
-    top: 45%;
+    top: 37%;
   }
   .dg-center::after {
     content: "";
@@ -1220,9 +1247,7 @@ ul {
     content: "";
     bottom: 10px;
   }
-  .banner-section .banner-section-inner h1 {
-    font-size: 26px;
-  }
+
   .banner-section .banner-section-inner p {
     margin-bottom: 30px;
   }
@@ -1234,7 +1259,7 @@ ul {
     justify-content: center;
   }
   .banner-section .banner-section-inner {
-    padding-bottom: 40px;
+    padding-bottom: 130px;
   }
   .heading-title h1,
   .head-dec .brand-logo h1 {
@@ -1352,8 +1377,8 @@ ul {
   }
 }
 /* 375 */
-@media only screen and (max-width: 375px) {
+/* @media only screen and (max-width: 379px) {
   .banner-section .banner-section-inner h1 {
-    font-size: 24px;
+    font-size: 25px;
   }
-}
+} */
